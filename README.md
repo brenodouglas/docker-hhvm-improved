@@ -1,6 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
--      [`latest` (*Dockerfile*)](https://github.com/estebanmatias92/docker-hhvm-fastcgi-improved/blob/master/Dockerfile)
+-      [`cli`,`latest` (*latest/Dockerfile*)](https://github.com/estebanmatias92/docker-hhvm-improved/blob/master/latest/Dockerfile)
+-      [`fastcgi` (*latest/fastcgi/Dockerfile*)](https://github.com/estebanmatias92/docker-hhvm-improved/blob/master/latest/fastcgi/Dockerfile)
 
 # What contains this image?
 
@@ -11,7 +12,7 @@
 
 ## Traditional way
 
-       docker run -d estebanmatias92/hhvm-fastcgi-improved
+       docker run -d estebanmatias92/hhvm-improved:fastcgi
 
 With this, you have a hhvm server that runs on port 9000 from the container ip.
 
@@ -21,7 +22,7 @@ With Dockerize you can redirect logs to Docker log collector and  easily manage 
 
 Before start to using it, i recommend you to read the [Jason Wilder’s post](http://jasonwilder.com/blog/2014/10/13/a-simple-way-to-dockerize-applications) for a more in-depth explanation about this tool.
 
-       FROM estebanmatias92/hhvm-fastcgi-improved
+       FROM estebanmatias92/hhvm-improved
        COPY ./config/php.tmpl /var/www/config/
        ENTRYPOINT [“dockerize”, “-template”, “/var/www/config/php.tmpl:/etc/hhvm/php.ini”, “-stdout”, “/var/log/hhvm/access.log”, “-stderr”, “/var/log/hhvm/error.log”, “/usr/local/bin/hhvm”]
        CMD [“--mode”, “server”]
@@ -45,7 +46,7 @@ View [license information](https://github.com/jwilder/dockerize#license) for doc
 
 ## Issues
 
-If you have any problems with or questions about this image, please contact me through a [GitHub issue](https://github.com/estebanmatias92/docker-hhvm-fastcgi-improved/issues).
+If you have any problems with or questions about this image, please contact me through a [GitHub issue](https://github.com/estebanmatias92/docker-hhvm-improved/issues).
 
 ## Contributing
 
