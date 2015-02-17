@@ -17,7 +17,7 @@ RUN buildDeps=' \
         libtool \
         gcc \
     ' \
-    && apt-get install -y $buildDeps && rm -rf /var/lib/apt/lists/* \
+    && apt-get update && apt-get install -y $buildDeps && rm -rf /var/lib/apt/lists/* \
     && apt-get install -y libpq-dev && rm -rf /var/lib/apt/lists/* \
     && libbson_version="1.0.0" \
     && wget --no-check-certificate -O /tmp/libbson.tar.gz https://github.com/mongodb/libbson/releases/download/$libbson_version/libbson-$libbson_version.tar.gz \
