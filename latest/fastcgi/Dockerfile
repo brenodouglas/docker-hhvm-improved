@@ -24,7 +24,7 @@ RUN buildDeps=' \
     && libbson_version="1.0.0" \
     && wget --no-check-certificate -O /tmp/libbson.tar.gz https://github.com/mongodb/libbson/releases/download/$libbson_version/libbson-$libbson_version.tar.gz \
     && mkdir /tmp/libbson \
-    && tar -C /tmp/libbson -xvzf /tmp/libbson.tar.gz --strip-components=! \
+    && tar -C /tmp/libbson -xvzf /tmp/libbson.tar.gz --strip-components=1 \
     && rm /tmp/libbson.tar.gz \
     && cd /tmp/libbson \
     && ./configure \
