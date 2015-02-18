@@ -1,6 +1,6 @@
 # Supported tags and respective `Dockerfile` links
 
--      [`cli`,`latest` (*latest/Dockerfile*)](https://github.com/estebanmatias92/docker-hhvm-improved/blob/master/latest/Dockerfile)
+-      [`cli`, `latest` (*latest/Dockerfile*)](https://github.com/estebanmatias92/docker-hhvm-improved/blob/master/latest/Dockerfile)
 -      [`fastcgi` (*latest/fastcgi/Dockerfile*)](https://github.com/estebanmatias92/docker-hhvm-improved/blob/master/latest/fastcgi/Dockerfile)
 
 # What contains this image?
