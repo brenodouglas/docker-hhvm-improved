@@ -12,12 +12,12 @@ RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* \
 # Install hhvm extension dependencies
 RUN buildDeps=' \
         wget \
+    ' \
+    && deps=' \
         automake \
         autoconf \
         libtool \
         gcc \
-    ' \
-    && deps=' \
         libpq-dev \
     ' \
     && apt-get update && apt-get install -y $buildDeps $deps && rm -rf /var/lib/apt/lists/* \
@@ -30,6 +30,7 @@ RUN buildDeps=' \
     && ./configure \
     && make \
     && make install \
+    && rm -rf $(pwd) \
     && cd - \
     && apt-get purge -y --auto-remove $buildDeps
 
