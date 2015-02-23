@@ -35,7 +35,7 @@ RUN buildDeps=' \
     && apt-get purge -y --auto-remove $buildDeps
 
 # Install hhvm extensions
-RUN hhvm-ext-install mongofill/mongofill-hhvm tlevi/hhvm-pgsql
+RUN hhvm-ext-install mongofill/mongofill-hhvm dstelter/hhvm-pgsql
 
 ENTRYPOINT ["/usr/local/bin/hhvm"]
 
