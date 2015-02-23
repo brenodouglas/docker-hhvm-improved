@@ -1,4 +1,4 @@
-FROM estebanmatias92/hhvm:3.4-cli
+FROM estebanmatias92/hhvm:cli
 
 MAINTAINER "Matias Esteban" <estebanmatias92@gmail.com>
 

@@ -1,4 +1,4 @@
-FROM estebanmatias92/hhvm:3.4-fastcgi
+FROM estebanmatias92/hhvm:fastcgi
 
 MAINTAINER "Matias Esteban" <estebanmatias92@gmail.com>
 
